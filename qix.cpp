@@ -144,8 +144,7 @@ static void RenderElement( sf::RenderWindow* window, element_t* elem ) {
 	vrtB = elem->vertexB;
 
 	// Find opposite and adjacent
-	vrtDelta.x = vrtA.x - vrtB.x;
-	vrtDelta.y = vrtA.y - vrtB.y;
+	vrtDelta = vrtB - vrtA;
 
 	// Find hypotenuse
 	float lineLength = sqrt( Pow( vrtDelta.x ) + Pow( vrtDelta.y ) );
